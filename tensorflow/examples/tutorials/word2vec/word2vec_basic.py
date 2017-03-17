@@ -47,7 +47,6 @@ def maybe_download(filename, expected_bytes):
 
 filename = maybe_download('text8.zip', 31344016)
 
-
 # Read the data into a list of strings.
 def read_data(filename):
   """Extract the first file enclosed in a zip file as a list of words"""
@@ -80,7 +79,7 @@ def build_dataset(words, vocabulary_size):
   count[0][1] = unk_count
   reverse_dictionary = dict(zip(dictionary.values(), dictionary.keys()))
   return data, count, dictionary, reverse_dictionary
-
+import pdb;pdb.set_trace()
 data, count, dictionary, reverse_dictionary = build_dataset(words, vocabulary_size)
 del words  # Hint to reduce memory.
 print('Most common words (+UNK)', count[:5])
