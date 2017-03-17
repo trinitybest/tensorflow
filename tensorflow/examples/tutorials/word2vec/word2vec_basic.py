@@ -79,7 +79,7 @@ def build_dataset(words, vocabulary_size):
   count[0][1] = unk_count
   reverse_dictionary = dict(zip(dictionary.values(), dictionary.keys()))
   return data, count, dictionary, reverse_dictionary
-import pdb;pdb.set_trace()
+
 data, count, dictionary, reverse_dictionary = build_dataset(words, vocabulary_size)
 del words  # Hint to reduce memory.
 print('Most common words (+UNK)', count[:5])
@@ -136,7 +136,7 @@ valid_examples = np.random.choice(valid_window, valid_size, replace=False)
 num_sampled = 64    # Number of negative examples to sample.
 
 graph = tf.Graph()
-
+import pdb;pdb.set_trace()
 with graph.as_default():
 
   # Input data.
